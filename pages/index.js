@@ -1,10 +1,18 @@
-import styles from '../styles/Home.module.css'
-import Sign from './sign'
+import { logIn } from "../lib/auth/auth.services"
+import { useRouter } from "next/router"
+import Sign from "../components/sign/sign";
 
-export default function Home() {
+export default function index() {
+
+  const router = useRouter();
+  const handleLogIn = () => {
+    router.push("/home");
+  }
+  const handleSignUp = () => {
+    router.push("/home");
+  }
+
   return (
-    <div className={styles.main}>
-      <Sign></Sign>
-    </div>
+    <Sign handleLogIn={handleLogIn} handleSignUp={handleSignUp}></Sign>
   )
 }

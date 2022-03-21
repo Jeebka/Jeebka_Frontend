@@ -1,0 +1,26 @@
+.groups_menu {
+    display: flex;
+    flex-direction: column;
+    width: 10vw;
+    background-color: white;
+}
+
+.groups_container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+}
+
+.groupMenu_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.groupMenu_item button{
+    background-color: red;
+    width: 1.5vw;
+    height: 1.5vw;
+    border-radius: 50%;
+    margin-left: auto;
+}
