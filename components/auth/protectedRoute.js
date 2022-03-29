@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router';
-import { useState } from 'react';
 import { onAuthStateChanged } from '../../lib/auth/auth.services';
 
 export default function ProtectedRoute( {child, redirectRoute} ) {

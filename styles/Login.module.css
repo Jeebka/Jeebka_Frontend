@@ -58,6 +58,8 @@
 
 .one {
   justify-content: flex-end;
+  z-index: 10000;
+  
 }
 
 .two {
@@ -80,6 +82,7 @@
   height: 100%;
   padding-top: 0%;
   padding: 10%;
+  z-index: inherit;
 }
 
 @keyframes slide-in {

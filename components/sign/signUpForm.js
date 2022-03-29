@@ -10,6 +10,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { useFormFields } from '../../hooks/sign/useFormFields';
 import { signUp } from '../../lib/auth/auth.services';
+import index from '../../pages';
 
 export default function SignUpForm({className, handleSignUp}) {
   const [fields, handleFieldChange] = useFormFields({
@@ -25,7 +26,7 @@ export default function SignUpForm({className, handleSignUp}) {
   return (
     <div className={className}>
       <CssBaseline />
-      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', zIndex: '10000'}}>
         <Avatar sx={{ m: 1, bgcolor: 'primary.main' }}></Avatar>
         <Typography component="h1" variant="h5">Sign up</Typography>
         <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
