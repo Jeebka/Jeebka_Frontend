@@ -1,18 +1,14 @@
-import { Link } from "@mui/material";
 import css from '../../styles/Group.module.css';
+import GroupMiniature from './GroupMiniature';
 
-export default function GroupsContainer({children, containerName, shouldRenderButton}) {
+export default function GroupsContainer({groups}) {
     return (
-        <div className={css.groupMenu_item}>
-            <h2>{containerName}</h2>
-            <div className={css.groups_container}>
-                {
-                    children.map((group) => {
-                        return <Link href={group.name}>{group.name}</Link> 
-                    })
-                }
-            </div>
-            {shouldRenderButton ? <button>+</button> : null}
+        <div className={css.groups_container}>
+            {
+                groups.map((group) => {
+                    return <GroupMiniature name={group.name} href={group.href}></GroupMiniature>
+                })
+            }
         </div>
     );
 }

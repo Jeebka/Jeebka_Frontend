@@ -1,0 +1,19 @@
+.homeContainer {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeContent {
+    width: 60vw;
+    height: 80vh;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
