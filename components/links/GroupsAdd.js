@@ -12,23 +12,23 @@ function sleep(delay = 0) {
 function GroupsAdd(props) {
   const [open, setOpen] = useState(false);
   const [options, setOptions] = useState([]);
+
+  const [value, setValue] = useState(options[0]);
+  const [inputValue, setInputValue] = useState("");
+
   const loading = open && options.length === 0;
 
   React.useEffect(() => {
     let active = true;
-
     if (!loading) {
       return undefined;
     }
-
     (async () => {
-      await sleep(1e3); // For demo purposes.
-
+      await sleep(1e3);
       if (active) {
         setOptions([...groups]);
       }
     })();
-
     return () => {
       active = false;
     };
@@ -44,17 +44,25 @@ function GroupsAdd(props) {
     <Autocomplete
       id="asynchronous-group-addlink"
       open={open}
+      sx={{ width: props.width }}
       onOpen={() => {
         setOpen(true);
       }}
       onClose={() => {
         setOpen(false);
       }}
+      value={value}
+      onChange={(event, newValue) => {
+        setValue(newValue);
+      }}
+      inputValue={inputValue}
+      onInputChange={(event, newInputValue) => {
+        setInputValue(newInputValue);
+      }}
       isOptionEqualToValue={(option, value) => option.name === value.name}
       getOptionLabel={(option) => option.name}
       options={options}
       loading={loading}
-      onChange={props.onChange}
       renderInput={(params) => (
         <TextField
           {...params}

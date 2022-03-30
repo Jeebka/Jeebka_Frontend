@@ -1,5 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import ReactDOM from "react-dom";
 import TextField from "@mui/material/TextField";
+import AddCircleIcon from "@mui/icons-material/AddCircle";
+
+import css from "../../styles/Link.module.css";
+
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import CheckboxesTags from "./CheckboxesTag";
@@ -14,13 +19,6 @@ function AddLink() {
     group: "undefined",
   });
 
-  function handleChanges(e){
-    setLink({
-      ...link,
-      [link.tags]: e.value,
-    });
-  }
-
   const handleChange = (e) => {
     setLink({
       ...link,
@@ -32,43 +30,71 @@ function AddLink() {
     console.log(link);
   };
 
-  return (
-    <form className="AddLink">
-      <Box
-        component="form"
-        autoComplete="off"
-        sx={{
-          "& .MuiTextField-root": { m: 1 },
-        }}
-      >
-        <TextField
-          required
-          className="addlink"
-          id="name-addlink"
-          label="Name"
-          name="name"
-          value={link.name}
-          onChange={handleChange}
-          sx={{ width: 297 }}
-        />
-        <TextField
-          required
-          className="addlink"
-          id="url-addlink"
-          label="URL"
-          name="url"
-          value={link.url}
-          onChange={handleChange}
-          sx={{ width: 297 }}
-        />
-        <GroupsAdd value={link.group} onChange={handleChange} />
-        <CheckboxesTags value={link.tags} onChanges={handleChanges} />
+  const [show, setShow] = useState(false);
 
-        <Button variant="contained" endIcon={<SendIcon />} onClick={addLink}>
-          Create!
+  const handleClick = () => {
+    setShow(!show);
+  };
+
+  return (
+    <div>
+      <footer>
+        <Button
+          variant="contained"
+          className="AddLinkbutton"
+          onClick={handleClick}
+          endIcon={<AddCircleIcon />}
+        >
+          {show ? "Cerrar" : "Añadir Link"}
         </Button>
-      </Box>
-    </form>
+      </footer>
+      {show ? (
+        <div className={`${css.AddLink}`}>
+          <Box
+            component="form"
+            autoComplete="off"
+            sx={{
+              "& .MuiTextField-root": { m: 1 },
+            }}
+          >
+            <TextField
+              required
+              className="addlink"
+              id="name-addlink"
+              label="Name"
+              name="name"
+              value={link.name}
+              onChange={handleChange}
+              sx={{ width: 297 }}
+            />
+            <TextField
+              required
+              className="addlink"
+              id="url-addlink"
+              label="URL"
+              name="url"
+              value={link.url}
+              onChange={handleChange}
+              sx={{ width: 297 }}
+            />
+            <GroupsAdd width={610} value={link.group} onChange={handleChange} />
+            <CheckboxesTags
+              width={610}
+              value={link.tags}
+              onChanges={handleChange}
+            />
+
+            <Button
+              variant="contained"
+              endIcon={<SendIcon />}
+              onClick={addLink}
+            >
+              Create!
+            </Button>
+          </Box>
+        </div>
+      ) : null}
+    </div>
   );
 }
 

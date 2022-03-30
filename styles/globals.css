@@ -14,3 +14,16 @@ a {
 * {
   box-sizing: border-box;
 }
+
+footer {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+}
+
+header {
+  float: right;
+  position: inherit;
+  top: 10px;
+  left: -10px;
+}
