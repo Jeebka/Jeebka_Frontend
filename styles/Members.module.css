@@ -1,0 +1,7 @@
+.info__card .member__container ul {
+     list-style: none;
+     padding: 0;
+}
+.info__card .member__container {
+     align-self: flex-start;
+}

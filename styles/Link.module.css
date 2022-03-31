@@ -1,0 +1,122 @@
+.link {
+     display: flex;
+     background-color: #b9f2f3;
+     border-radius: 3px;
+     box-shadow: 0px 1px 2px;
+     margin: 10px auto;
+     justify-content: space-between;
+     position: relative;
+     overflow: hidden;
+     flex-direction: column;
+}
+
+/*.link .left-container {
+     display: flex;
+     flex-direction: column;
+     width: 50%;
+}
+
+.link .right-container {
+     width: 50%;
+}*/
+
+.link .url__container {
+     margin-right: 30px;
+     width: 50%;
+     overflow: hidden;
+     text-overflow: ellipsis;
+}
+
+.link .title__container {
+     width: 50%;
+}
+
+.link .head__link__container {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     position: relative;
+     margin-top: 15px;
+     margin-left: 15px;
+}
+
+.link h3 {
+     margin: 0px;
+     margin-bottom: 10px;
+}
+
+.tag {
+     background-color: #1b9b9d;
+     color: #f5f5f5;
+     border-radius: 15px;
+     margin: 5px 5px 0px 0px;
+     padding: 5px 8px;
+     display: inline-block;
+     transition: transform 0.1s;
+}
+
+.link a {
+     text-decoration: none;
+     font-size: 18px;
+     color: black;
+}
+.link a:hover {
+     color: #15787a;
+}
+
+.link:hover .tag {
+}
+
+.link .tag:hover {
+     transform: scale(1.05);
+}
+
+.link .tags__container {
+     width: 100%;
+     position: relative;
+     background-color: #f5f5f5;
+     padding: 15px;
+}
+
+.link .button__delete {
+     overflow: hidden;
+     position: absolute;
+     width: 50px;
+     margin: 0px;
+     margin-top: 5px;
+     right: 0;
+     top: 0;
+}
+
+.link .button__delete .icon__delete {
+     color: dimgrey;
+     width: 20px;
+}
+
+/*480 960 1328*/
+@media screen and (max-width: 480px) {
+     .link .head__link__container {
+          flex-direction: column;
+     }
+     .link a {
+          text-decoration: none;
+          font-size: 14px;
+     }
+     .link .title__container {
+          width: 100%;
+     }
+     .link .url__container {
+          padding-bottom: 10px;
+          width: 100%;
+     }
+}
+
+@media screen and (max-width: 960px) {
+     .link .url__container {
+          width: 70%;
+     }
+
+     .link .title__container {
+          width: 30%;
+     }
+}

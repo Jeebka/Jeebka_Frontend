@@ -1,0 +1,6 @@
+.group-extended-container {
+  position: relative;
+  background-color: #000;
+  flex: 80%;
+  height: 100%;
+}

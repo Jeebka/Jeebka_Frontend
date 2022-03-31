@@ -1,0 +1,37 @@
+.header {
+     position: relative;
+     display: flex;
+     height: 60px;
+     padding: 15px 45px;
+     background-color: #b9f2f3;
+     justify-content: space-between;
+     align-items: center;
+     border-radius: 3px;
+     box-shadow: 0px 1px 2px;
+     z-index: 20;
+}
+
+.header .button__menu__container .menu__groupInfo {
+     color: #1b9b9d;
+     transform: scale(1.3);
+     margin-right: 10px;
+}
+
+.header .button__menu__container .menu__groupAdd {
+     color: #1b9b9d;
+     transform: scale(1.3);
+     margin-right: 10px;
+}
+
+.header .button__menu__container .menu__groupInfo:hover {
+     color: #15787a;
+}
+
+.header .button__menu__container .menu__groupAdd:hover {
+     color: #15787a;
+}
+
+.header .title {
+     color: #15787a;
+     font-weight: bold;
+}
