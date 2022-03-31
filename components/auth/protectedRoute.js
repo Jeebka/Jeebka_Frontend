@@ -1,7 +1,8 @@
 import { useRouter } from 'next/router';
-import { onAuthStateChanged } from '../../lib/auth/auth.services';
+import { onAuthStateChanged } from '/lib/auth/auth.services';
 
 export default function ProtectedRoute( {child, redirectRoute} ) {
+  
   const router = useRouter();
   let toRender = child;
 
@@ -19,4 +20,5 @@ export default function ProtectedRoute( {child, redirectRoute} ) {
       {toRender}
     </>
   );
+  
 };

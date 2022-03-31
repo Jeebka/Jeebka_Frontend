@@ -3,8 +3,8 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import { styled } from '@mui/material/styles';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { styled } from '@mui/material//styles';
+import { createTheme, ThemeProvider } from '@mui/material//styles';
 
 let theme = createTheme({
   palette: {
@@ -20,6 +20,11 @@ let theme = createTheme({
   },
 });
 
+const getColor = () => { 
+  return "hsl(" + 360 * Math.random() + ',' +
+             (25 + 70 * Math.random()) + '%,' + 
+             (85 + 10 * Math.random()) + '%)'
+}
 
 const GroupNameInput = styled('textarea')(({ theme }) => ({
   width: '100%',
@@ -58,14 +63,15 @@ export default function GroupMiniature({name, href}) {
           sx={{
             width: 'auto',
             height: 100,
-            backgroundColor: '#6a9f64',
+            backgroundColor: getColor(),
           }}
         />
         <CardContent>
           <TextField  id="standard-basic" variant="standard"
             fullWidth
-            placeholder={name}
-            InputProps={{ disableUnderline: true }}
+            contentEditable={false}
+            value={name}
+            InputProps={{ disableUnderline: true, readOnly: true }}
             sx = {{
               padding: 'none',
               marginBottom: '10px',

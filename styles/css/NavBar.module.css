@@ -1,0 +1,112 @@
+.topBar {
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    background-color: #B9F2F3;
+    border-bottom: #21BDC0 2px solid;
+    width: 100vw;
+    height: 8vh;
+    position: sticky;
+    left: 0px;
+    top: 0px;
+    -webkit-box-shadow: 0px 2px 15px 5px rgba(0,0,0,0.25); 
+    box-shadow: 0px 2px 15px 5px rgba(0,0,0,0.25);
+    justify-items: center;
+    align-items: center;
+}   
+
+
+/* NavBar */
+.navBar {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 33% 34% 33%;
+    justify-items: center;
+    align-items: center;
+}
+
+.navBarItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    color: #21BDC0;
+    cursor: pointer;
+}
+
+.navBarItemContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    width: 100%;
+    font-size: large;
+    border-radius: 1vw;
+    transition: all 0.25s;
+}
+
+.navBarItem:hover {
+    color: #1B9B9D;
+}
+
+.navBarItem.active {
+    color: #1B9B9D;
+    border-bottom: 2px #1B9B9D solid;
+}
+
+.navBarItemContent:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+
+/* UserBar */
+.userBar {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0% 1% 0% 1%;
+}
+
+.userItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0% 1% 0% 1%;
+    height: 100%;
+}
+
+.userItemMenu {
+    display: none;
+    flex-direction: column;
+    width: 10vw;
+    align-items: center;
+    position: fixed;
+    top: 7vh;
+    right: 1vw;
+    background-color: #EEFCFC;
+    padding: 0.5% 0% 0.5% 0%;
+    border-radius: 1vw;
+    border-top-right-radius: 0px;
+    -webkit-box-shadow: 0px 2px 15px 5px rgba(0,0,0,0.125); 
+    box-shadow: 0px 2px 15px 5px rgba(0,0,0,0.125);
+}
+
+.userItem:hover .userItemMenu, .userItemMenu:hover {
+    display: flex;
+}
+
+.userMenuItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10%;
+    width: 100%;
+    height: 5vh;
+    font-weight: 600;
+}

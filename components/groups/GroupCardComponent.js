@@ -4,11 +4,11 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import { styled, alpha } from '@mui/material/styles';
+import { styled, alpha } from '@mui/material//styles';
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
 import Tooltip from '@mui/material/Tooltip';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { createTheme, ThemeProvider } from '@mui/material//styles';
 
 let theme = createTheme({
   palette: {
@@ -77,7 +77,6 @@ export default function GroupCardComponent() {
             }}
           />
           <GroupNameInput placeholder="Put a group description here."/>
-
         </CardContent>
         <CardActions>
         <Tooltip title="Add" placement="right">

@@ -1,9 +1,7 @@
 .sideMenu { 
     display: flex;
     flex-direction: column;
-    border-right: #b98593 2px solid;
-    border-bottom: #b98593 2px solid;
-    background-color: #fccfdb6c;
+    background-color: #EEFCFC;
     border-bottom-right-radius: 1vw;
     padding-left: 1vw;
     padding-top: 1vh;
@@ -13,6 +11,8 @@
     left: 0px;
     top: 0px;
     transition: width 0.5s;
+    -webkit-box-shadow: 0px 2px 15px 5px rgba(0,0,0,0.25); 
+    box-shadow: 0px 2px 15px 5px rgba(0,0,0,0.25);
 }
 
 .sideMenuContent { 
@@ -35,8 +35,7 @@
 
 .sideMenu hr {
     width: 90%;
-    color: rgba(0, 0, 0, 0.5);
-
+    color: #73E5E7; 
 }
 
 .menuItem {
@@ -50,7 +49,7 @@
     margin-bottom: 2%;
     padding: 5%;
     border-radius: 1vw;
-    color: rgba(0, 0, 0, 0.5);
+    color: #21BDC0;
 }
 
 .menuItem span {
@@ -58,7 +57,7 @@
 }
 
 .menuItem:hover {
-    background-color: #e1a0b185;
+    background-color: #1b9b9d50;
     cursor: pointer;
-    color: rgba(0, 0, 0, 0.75);
+    color: #15787A;
 }

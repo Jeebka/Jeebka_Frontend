@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bd6417c3-3b5c-45d7-8170-174bc07c40e2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Jeebka_FrontEnd.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Commons/MultiButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Commons/PopUp/PopUpButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Commons/PopUp/PopUpWindow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/topBar/NavBar/NavBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/topBar/NavBar/NavBarItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/topBar/SearchBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/topBar/UserBar/UserBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/topBar/UserBar/UserItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/topBar/UserBar/UserMenu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/css/Link.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/css/MultiButton.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/css/NavBar.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/css/Page.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/css/PopUp.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/resources/svg/GroupAddIcon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/resources/svg/LinkAddIcon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/resources/svg/LogOutIcon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/resources/svg/PlusIcon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/auth/protectedRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/auth/protectedRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/groups/GroupCardComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/groups/GroupCardComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/groups/GroupMiniature.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/groups/GroupMiniature.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/groups/groupsContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/groups/groupsContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/homeContainer/homeContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/homeContainer/homeContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sideMenu/menuItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Commons/MenuItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sideMenu/sideMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sideMenu/sideMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sign/cover.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sign/cover.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sign/sign.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sign/sign.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sign/signForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sign/signForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sign/signInForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sign/signInForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sign/signUpForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sign/signUpForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/topBar/NavBar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/topBar/NavBarItem.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/topBar/TopBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/topBar/TopBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Group.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/Group.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/HomeContainer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/HomeContainer.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Login.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/Login.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/NavBar.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/SideMenu.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/SideMenu.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/resources/svg/groupIcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/styles/resources/svg/groupIcon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/resources/svg/homeIcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/styles/resources/svg/homeIcon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/resources/svg/sharedIcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/styles/resources/svg/sharedIcon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/resources/svg/suggestedIcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/styles/resources/svg/suggestedIcon.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="279yjJPDF94mpfaa14CBbv0chLC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bd6417c3-3b5c-45d7-8170-174bc07c40e2" name="Changes" comment="" />
+      <created>1648746733268</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1648746733268</updated>
+      <workItem from="1648746735942" duration="865000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

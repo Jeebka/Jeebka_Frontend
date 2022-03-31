@@ -1,4 +1,4 @@
-import css from '../../styles/Group.module.css';
+import css from '/styles/css/Group.module.css';
 import GroupMiniature from './GroupMiniature';
 
 export default function GroupsContainer({groups}) {
@@ -6,7 +6,7 @@ export default function GroupsContainer({groups}) {
         <div className={css.groups_container}>
             {
                 groups.map((group) => {
-                    return <GroupMiniature name={group.name} href={group.href}></GroupMiniature>
+                    return <GroupMiniature name={group.name} href={group.href}/>
                 })
             }
         </div>

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import css from "../../styles/Login.module.css"
+import css from "/styles/css/Login.module.css"
 
 export default function Cover({onClick}) {
 

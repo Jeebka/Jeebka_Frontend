@@ -3,5 +3,6 @@
     grid-template-columns: repeat(4, 15vw);
     row-gap: 2vh;
     justify-items: center;
+    cursor: pointer;
 }
 

@@ -1,0 +1,20 @@
+.searchBar {
+    display: flex;
+    flex-direction: row;
+    width: 30vw;
+    background: #f9f9f900;
+}
+
+.AddLink {
+    width: 100%;
+    max-width: 650px;
+    background: #f9f9f9;
+    border: black 2px solid;
+    margin: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+}

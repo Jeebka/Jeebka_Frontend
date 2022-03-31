@@ -11,18 +11,15 @@
   "dependencies": {
     "@emotion/react": "^11.8.1",
     "@emotion/styled": "^11.8.1",
-    "@fortawesome/fontawesome": "^1.1.8",
-    "@fortawesome/fontawesome-free-solid": "^5.0.13",
-    "@fortawesome/react-fontawesome": "^0.1.18",
     "@material-ui/icons": "^4.11.2",
     "@mui/icons-material": "^5.5.1",
     "@mui/material": "^5.4.3",
-    "@svgr/webpack": "^6.2.1",
     "firebase": "^9.6.9",
     "next": "12.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-qrcode-logo": "^2.6.0"
+    "react-qrcode-logo": "^2.6.0",
+    "sass": "^1.49.10"
   },
   "devDependencies": {
     "eslint": "8.9.0",

@@ -8,8 +8,8 @@ import Checkbox from '@mui/material/Checkbox';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { useFormFields } from '../../hooks/sign/useFormFields';
-import { logIn } from '../../lib/auth/auth.services';
+import { useFormFields } from '/hooks/sign/useFormFields';
+import { logIn } from '/lib/auth/auth.services';
 
 export default function SignInForm({className, handleLogIn}) {
 

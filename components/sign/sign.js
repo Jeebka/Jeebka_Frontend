@@ -1,8 +1,8 @@
 import { Container } from "@mui/material";
 import Grid from '@mui/material/Grid';
-import Cover from "./cover";
-import SignForm from "./signForm";
-import css from '../../styles/Login.module.css'
+import Cover from "./Cover";
+import SignForm from "./SignForm";
+import css from '/styles/css/Login.module.css'
 import { useState } from "react";
 
 export default function Sign({handleLogIn, handleSignUp}) {

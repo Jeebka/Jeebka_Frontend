@@ -1,8 +1,6 @@
-import { Grid } from '@mui/material'
-import { useState } from 'react'
-import css from '../../styles/Login.module.css'
-import SignInForm from './signInForm'
-import SignUpForm from './signUpForm'
+import css from '/styles/css/Login.module.css'
+import SignInForm from './SignInForm'
+import SignUpForm from './SignUpForm'
 
 export default function SignForm({signInIsVisible, signUpIsVisible, handleLogIn, handleSignUp}) {
 
