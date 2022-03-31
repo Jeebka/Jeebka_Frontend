@@ -7,6 +7,7 @@ import { IconButton } from "@mui/material";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import GroupsContainer from "../components/groups/groupsContainer";
 import AddLinkIcon from "@mui/icons-material/AddLink";
+import CloseIcon from "@mui/icons-material/Close";
 
 export default function home() {
   const handleLogOut = () => {
@@ -33,13 +34,15 @@ export default function home() {
           <section>
             <SearchBar />
           </section>
-          {!show ? (
-            <IconButton className="AddLinkButton" onClick={handleClick}>
+          <IconButton className="AddLinkButton" onClick={handleClick}>
+            {show ? (
+              <CloseIcon sx={{ width: 30, height: 30 }} />
+            ) : (
               <AddLinkIcon sx={{ width: 30, height: 30 }} />
-            </IconButton>
-          ) : null}
+            )}
+          </IconButton>
           <section>
-            <AddLink show={show} clickButton={() => this.handleClick()} />
+            <AddLink show={show} clickButton={() => handleClick()} />
           </section>
         </div>
       }

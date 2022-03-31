@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
 import TextField from "@mui/material/TextField";
-import AddCircleIcon from "@mui/icons-material/AddCircle";
 import { CircularProgress, IconButton } from "@mui/material";
 import { Autocomplete } from "@mui/material";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
@@ -10,7 +8,6 @@ import Checkbox from "@mui/material/Checkbox";
 import css from "../../styles/Link.module.css";
 
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import SendIcon from "@mui/icons-material/Send";
 import CloseIcon from "@mui/icons-material/Close";
 
@@ -20,7 +17,7 @@ function sleep(delay = 0) {
   });
 }
 
-function AddLink(props) {
+function AddLink({ show, clickButton }) {
   const [tagsAdd, setTagsAdd] = useState({});
   const [groupAdd, setGroupAdd] = useState(" ");
   const [link, setLink] = useState({
@@ -35,7 +32,6 @@ function AddLink(props) {
     });
   };
 
-  const [show, setShow] = useState(false);
   const [open, setOpen] = useState(false);
   const [options, setOptions] = useState([]);
 
@@ -49,7 +45,7 @@ function AddLink(props) {
   const addLink = () => {
     console.log(link, "tags:", tagsAdd, "group:", groupAdd);
     cleanValues();
-    this.props.handleClick();
+    clickButton();
   };
 
   const loading = open && options.length === 0;
@@ -81,10 +77,10 @@ function AddLink(props) {
 
   return (
     <div className="AddLinkComponent">
-      {props.show ? (
+      {show ? (
         <div className={`${css.AddLink}`}>
           <div className="space">
-            <IconButton onClick={props.handleClick}>
+            <IconButton onClick={clickButton}>
               <CloseIcon sx={{ width: 15, height: 15 }} />
             </IconButton>
           </div>
