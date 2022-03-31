@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import TextField from "@mui/material/TextField";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
-import { CircularProgress } from "@mui/material";
+import { CircularProgress, IconButton } from "@mui/material";
 import { Autocomplete } from "@mui/material";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
@@ -12,6 +12,7 @@ import css from "../../styles/Link.module.css";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import SendIcon from "@mui/icons-material/Send";
+import CloseIcon from "@mui/icons-material/Close";
 
 function sleep(delay = 0) {
   return new Promise((resolve) => {
@@ -19,7 +20,7 @@ function sleep(delay = 0) {
   });
 }
 
-function AddLink() {
+function AddLink(props) {
   const [tagsAdd, setTagsAdd] = useState({});
   const [groupAdd, setGroupAdd] = useState(" ");
   const [link, setLink] = useState({
@@ -34,15 +35,21 @@ function AddLink() {
     });
   };
 
-  const addLink = () => {
-    console.log(link, "tags:", tagsAdd, "group:", groupAdd);
-  };
-
   const [show, setShow] = useState(false);
   const [open, setOpen] = useState(false);
   const [options, setOptions] = useState([]);
-  const handleClick = () => {
-    setShow(!show);
+
+  const cleanValues = () => {
+    setLink({
+      name: "",
+      url: "",
+    });
+  };
+
+  const addLink = () => {
+    console.log(link, "tags:", tagsAdd, "group:", groupAdd);
+    cleanValues();
+    this.props.handleClick();
   };
 
   const loading = open && options.length === 0;
@@ -73,19 +80,14 @@ function AddLink() {
   const checkedIcon = <CheckBoxIcon fontSize="small" />;
 
   return (
-    <div>
-      <footer>
-        <Button
-          variant="contained"
-          className="AddLinkbutton"
-          onClick={handleClick}
-          endIcon={<AddCircleIcon />}
-        >
-          {show ? "Cerrar" : "Añadir Link"}
-        </Button>
-      </footer>
-      {show ? (
+    <div className="AddLinkComponent">
+      {props.show ? (
         <div className={`${css.AddLink}`}>
+          <div className="space">
+            <IconButton onClick={props.handleClick}>
+              <CloseIcon sx={{ width: 15, height: 15 }} />
+            </IconButton>
+          </div>
           <Box
             component="form"
             autoComplete="off"
@@ -96,29 +98,31 @@ function AddLink() {
             <TextField
               required
               className="addlink"
+              size="small"
               id="name-addlink"
               label="Name"
               name="name"
               value={link.name}
               onChange={handleChange}
-              sx={{ width: 297 }}
+              sx={{ width: 200 }}
             />
             <TextField
               required
+              size="small"
               className="addlink"
               id="url-addlink"
               label="URL"
               name="url"
               value={link.url}
               onChange={handleChange}
-              sx={{ width: 297 }}
+              sx={{ width: 200 }}
             />
             <Autocomplete
               id="asynchronous-group-addlink"
               name="group"
               open={open}
-              size="medium"
-              sx={{ width: 610 }}
+              size="small"
+              sx={{ width: 415 }}
               onChange={(event, value) => setGroupAdd(value)}
               onOpen={() => {
                 setOpen(true);
@@ -154,10 +158,11 @@ function AddLink() {
             <Autocomplete
               multiple
               name="tags"
-              size="medium"
+              size="small"
+              limitTags={3}
               //error={error}
               id="checkbox-tags"
-              sx={{ width: 610 }}
+              sx={{ width: 415 }}
               options={tags}
               disableCloseOnSelect
               getOptionLabel={(tags) => tags.name}
@@ -178,13 +183,9 @@ function AddLink() {
               )}
             />
 
-            <Button
-              variant="contained"
-              endIcon={<SendIcon />}
-              onClick={addLink}
-            >
-              Create!
-            </Button>
+            <IconButton onClick={addLink}>
+              <SendIcon sx={{ width: 20, height: 20 }} />
+            </IconButton>
           </Box>
         </div>
       ) : null}
