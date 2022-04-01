@@ -24,6 +24,10 @@
     overflow-x: hidden;
 }
 
+.homeContent.noScroll {
+    overflow: hidden;
+}
+
 .buttonsContainer {
     display: flex;
     flex-direction: column-reverse;

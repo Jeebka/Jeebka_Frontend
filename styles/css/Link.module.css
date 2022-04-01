@@ -18,3 +18,250 @@
     transform: translate(-50%, -50%);
     border-radius: 5px;
 }
+
+/* Links view*/
+
+.info__card .name__group__card {
+    margin-bottom: 15px;
+}
+.group-extended-container {
+    position: relative;
+    background-color: #000;
+    flex: 80%;
+    height: 100%;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    height: 60px;
+    padding: 15px 45px;
+    background-color: #b9f2f3;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 3px;
+    box-shadow: 0px 1px 2px;
+    z-index: 20;
+}
+
+.header .button__menu__container .menu__groupInfo {
+    color: #1b9b9d;
+    transform: scale(1.3);
+    margin-right: 10px;
+}
+
+.header .button__menu__container .menu__groupAdd {
+    color: #1b9b9d;
+    transform: scale(1.3);
+    margin-right: 10px;
+}
+
+.header .button__menu__container .menu__groupInfo:hover {
+    color: #15787a;
+}
+
+.header .button__menu__container .menu__groupAdd:hover {
+    color: #15787a;
+}
+
+.header .title {
+    color: #15787a;
+    font-weight: bold;
+}
+
+.group__info__container {
+    position: fixed;
+    width: 700px;
+    background-color: #e4e4e4;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: scroll;
+    z-index: 30;
+    top: 0;
+    right: -100%;
+    transition: 350ms;
+}
+.group__info__container.active {
+    right: 0;
+    transition: 350ms;
+}
+
+.group__info__container .detelete__button {
+    align-self: flex-start;
+}
+
+@media screen and (max-width: 480px) {
+    .group__info__container {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .group__info__container {
+        width: 480px;
+    }
+}
+
+.info__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 45px;
+    background-color: #ffffff;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2px;
+    box-shadow: 0px 1px 1px;
+    z-index: 20;
+    margin-bottom: 20px;
+}
+
+.tittle_card {
+    color: #808080;
+    padding-bottom: 18px;
+}
+
+.info__card .button__close {
+    color: #808080;
+    transform: scale(1.3);
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.links_list_container {
+    background-color: #f5f5f5;
+    position: relative;
+    height: 90%;
+    overflow-y: auto;
+    padding: 25px;
+    z-index: 10;
+}
+
+.group_extended_container {
+    position: relative;
+    background-color: transparent;
+    height: 100%;
+}
+
+.info__card .member__container ul {
+    list-style: none;
+    padding: 0;
+}
+.info__card .member__container {
+    align-self: flex-start;
+}
+
+.link {
+    display: flex;
+    background-color: #b9f2f3;
+    border-radius: 3px;
+    box-shadow: 0px 1px 2px;
+    margin: 10px auto;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.link .url__container {
+    margin-right: 30px;
+    width: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.link .title__container {
+    width: 50%;
+}
+
+.link .head__link__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.link h3 {
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.tag {
+    background-color: #1b9b9d;
+    color: #f5f5f5;
+    border-radius: 15px;
+    margin: 5px 5px 0px 0px;
+    padding: 5px 8px;
+    display: inline-block;
+    transition: transform 0.1s;
+}
+
+.link a {
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+}
+.link a:hover {
+    color: #15787a;
+}
+
+.link:hover .tag {
+}
+
+.link .tag:hover {
+    transform: scale(1.05);
+}
+
+.link .tags__container {
+    width: 100%;
+    position: relative;
+    background-color: #f5f5f5;
+    padding: 15px;
+}
+
+.link .button__delete {
+    overflow: hidden;
+    position: absolute;
+    width: 50px;
+    margin: 5px 0px 0px;
+    right: 0;
+    top: 0;
+}
+
+.link .button__delete .icon__delete {
+    color: dimgrey;
+    width: 20px;
+}
+
+/*480 960 1328*/
+@media screen and (max-width: 480px) {
+    .link .head__link__container {
+        flex-direction: column;
+    }
+    .link a {
+        text-decoration: none;
+        font-size: 14px;
+    }
+    .link .title__container {
+        width: 100%;
+    }
+    .link .url__container {
+        padding-bottom: 10px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .link .url__container {
+        width: 70%;
+    }
+
+    .link .title__container {
+        width: 30%;
+    }
+}

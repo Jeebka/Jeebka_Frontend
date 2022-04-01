@@ -5,38 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd6417c3-3b5c-45d7-8170-174bc07c40e2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/Commons/Autocomplete/GroupsAutocomplete.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Commons/Autocomplete/TagsAutocomplete.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Commons/PopUp/AddPopUp/AddCard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Commons/PopUp/AddPopUp/CustomInputs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Commons/PopUp/AddPopUp/GroupAddCardContent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Commons/PopUp/AddPopUp/LinkAddCardContent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/redux/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/redux/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/playground.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jeebka/jeebka.services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Commons/MenuItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Commons/MenuItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Commons/MultiButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Commons/MultiButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Commons/PopUp/PopUpButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Commons/PopUp/PopUpButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Commons/PopUp/PopUpWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Commons/PopUp/PopUpWindow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/auth/protectedRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/auth/protectedRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/groups/GroupCardComponent.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/groups/GroupMiniature.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/groups/GroupMiniature.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/sign/cover.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sign/cover.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/sign/sign.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sign/sign.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/sign/signForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sign/signForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/topBar/TopBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/topBar/TopBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/topBar/UserBar/UserMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/topBar/UserBar/UserMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/homeContainer/homeContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/homeContainer/homeContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/redux/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/redux/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/redux/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/redux/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/css/Group.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/Group.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/playground.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/playground.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/css/HomeContainer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/HomeContainer.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/css/Login.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/Login.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/css/NavBar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/NavBar.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/css/Page.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/Page.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/css/PopUp.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/PopUp.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/css/Link.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/Link.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +85,7 @@
       <workItem from="1648746735942" duration="12967000" />
       <workItem from="1648760034263" duration="2694000" />
       <workItem from="1648762772603" duration="6802000" />
-      <workItem from="1648770123240" duration="6274000" />
+      <workItem from="1648770123240" duration="17061000" />
     </task>
     <servers />
   </component>
