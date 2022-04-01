@@ -27,7 +27,7 @@ export default function Index() {
 
   return (
     <>
-      {toRender}
+      <Sign handleLogIn={handleLogIn} handleSignUp={handleSignUp}></Sign>
     </>
   )
 }

@@ -30,12 +30,10 @@ export default function Sign({handleLogIn, handleSignUp}) {
   return (
     <div className={css.main}>
       <Container component="main" maxWidth="md">
-        <Grid sx={{height: "75vh"}} className={css.forms_container}>
-          <Grid item xs={12}>
-            <SignForm handleLogIn={handleLogIn} handleSignUp={handleSignUp} signInIsVisible={signInIsVisible} signUpIsVisible={signUpIsVisible}></SignForm>
-            <Cover onClick={switchForm}></Cover> 
-          </Grid>
-        </Grid>
+        <div sx={{height: "75vh"}} className={css.forms_container}>
+          <SignForm signInIsVisible={signInIsVisible} signUpIsVisible={signUpIsVisible} handleLogIn={handleLogIn}/>
+          <Cover onClick={switchForm}/>
+        </div>
       </Container>
     </div>
   )

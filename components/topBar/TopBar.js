@@ -8,8 +8,8 @@ export default function TopBar({homeOnClick, suggestedOnClick, sharedOnClick, ta
   return (
     <div className={css.topBar}>
       <SearchBar/>
-      <NavBar homeOnClick={homeOnClick} sharedOnClick={sharedOnClick} suggestedOnClick={suggestedOnClick} isActive={tabsState}></NavBar>
-      <UserBar></UserBar>
+      <NavBar homeOnClick={homeOnClick} sharedOnClick={sharedOnClick} suggestedOnClick={suggestedOnClick} isActive={tabsState}/>
+      <UserBar/>
     </div>
   )
 }

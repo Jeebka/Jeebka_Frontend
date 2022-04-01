@@ -9,10 +9,10 @@ export default function Cover({onClick}) {
   }
 
   return (
-    <div style={{height: "100%"}}>
-      {side ? <div id="1" onClick={switchSide} className={`${css.cover} ${css.left}`}/> : null}
-      {side ? null : <div id="2" onClick={switchSide} className={`${css.cover} ${css.right} ${css.reverse}`}/>}
-    </div>
+    <>
+      {side ? <div onClick={switchSide} className={`${css.cover} ${css.left}`}/> : null}
+      {side ? null : <div onClick={switchSide} className={`${css.cover} ${css.right} ${css.reverse}`}/>}
+    </>
     
   )
 }
