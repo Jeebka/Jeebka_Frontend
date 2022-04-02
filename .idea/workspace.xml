@@ -5,18 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd6417c3-3b5c-45d7-8170-174bc07c40e2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/jeebka/jeebka.services.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/homeContainer/homeContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/homeContainer/homeContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/redux/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/redux/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/redux/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/redux/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Commons/MultiButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Commons/MultiButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Commons/PopUp/AddPopUp/AddCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Commons/PopUp/AddPopUp/AddCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Commons/PopUp/AddPopUp/GroupAddCardContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Commons/PopUp/AddPopUp/GroupAddCardContent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Commons/PopUp/AddPopUp/LinkAddCardContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Commons/PopUp/AddPopUp/LinkAddCardContent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Commons/PopUp/PopUpButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Commons/PopUp/PopUpButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Commons/PopUp/PopUpWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Commons/PopUp/PopUpWindow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/groups/GroupMiniature.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/groups/GroupMiniature.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/groups/groupsContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/groups/groupsContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sign/signInForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sign/signInForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sign/signUpForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sign/signUpForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hooks/sign/useFormFields.js" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/sign/useFields.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/auth/auth.services.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/auth/auth.services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/firebase/firebase.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/firebase/firebase.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/jeebka/jeebka.services.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/jeebka/jeebka.services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/playground.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/playground.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/css/HomeContainer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/HomeContainer.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/css/Link.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/Link.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +91,7 @@
       <workItem from="1648760034263" duration="2694000" />
       <workItem from="1648762772603" duration="6802000" />
       <workItem from="1648770123240" duration="17061000" />
+      <workItem from="1648826829050" duration="14879000" />
     </task>
     <servers />
   </component>

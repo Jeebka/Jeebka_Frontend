@@ -25,27 +25,12 @@ const theme = createTheme({
   },
 });
 
-export default function AddCard({onClick, isForLink}) {
-
-  const saveGroup = () => {
-    fetch(" http://localhost:5203/v1/jeebka/users/esteesunemail", {
-      mode: 'cors',
-      method: "GET",
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      }
-    })
-    .then((resp) => resp.json())
-    .then(function(data){
-      console.log(data.results);
-    })
-  }
+export default function AddCard({onClick, isForLink, closePopUp}) {
 
   return (
       <Card sx={{ maxWidth: 365 }} onClick={onClick}>
         <Box sx={{width: 'auto', height: 150, backgroundColor: !isForLink ? '#77BEF8' : '#9CD39D',}}/>
-        { isForLink ? <LinkAddCardContent theme={theme}/> : <GroupAddCardContent theme={theme}/>}
+        { isForLink ? <LinkAddCardContent theme={theme} closePopUp={closePopUp}/> : <GroupAddCardContent theme={theme} closePopUp={closePopUp}/>}
       </Card>
   );
 }

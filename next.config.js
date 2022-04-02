@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
-module.exports = module.exports = {
+module.exports = {
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,

@@ -8,11 +8,11 @@ import Checkbox from '@mui/material/Checkbox';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { useFormFields } from '/hooks/sign/useFormFields';
+import { useFields } from '/hooks/sign/useFields';
 import { signUp } from '/lib/auth/auth.services';
 
 export default function SignUpForm({className, handleSignUp}) {
-  const [fields, handleFieldChange] = useFormFields({
+  const [fields, handleFieldChange] = useFields({
     firstName: "",
     lastName: "",
     email: "",

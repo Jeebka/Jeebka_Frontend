@@ -7,6 +7,7 @@ import CardActions from "@mui/material/CardActions";
 import {CustomNameInput} from "./CustomInputs";
 import TagsAutocomplete from "../../Autocomplete/TagsAutocomplete";
 import GroupsAutocomplete from "../../Autocomplete/GroupsAutocomplete";
+import {useFields} from "../../../../hooks/sign/useFields";
 
 const groups = [
     { name: "Mate", id: "123" },
@@ -30,28 +31,22 @@ const tags = [
 export default function LinkAddCardContent({addButtonOnClick, theme, handleSave}){
 
     const [tagsAdd, setTagsAdd] = useState({});
-    const [groupAdd, setGroupAdd] = useState(" ");
-    const [link, setLink] = useState({
-        name: "",
-        url: "",
-    });
+    const [groupAdd, setGroupAdd] = useState("");
 
-    const handleChange = (e) => {
-        setLink({
-            ...link,
-            [e.target.name]: e.target.value,
-        });
-    };
+    const [link, setLink] = useFields({
+        name: "",
+        url: ""
+    });
 
     const cleanValues = () => {
         setLink({
             name: "",
-            url: "",
+            url: ""
         });
     };
 
     const addLink = () => {
-        console.log(link, "tags:", tagsAdd, "group:", groupAdd);
+        console.log(link);
         cleanValues();
         addButtonOnClick();
     };
