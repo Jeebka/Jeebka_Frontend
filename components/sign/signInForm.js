@@ -8,17 +8,19 @@ import Checkbox from '@mui/material/Checkbox';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { useFormFields } from '/hooks/sign/useFormFields';
+import { useFields } from '/hooks/sign/useFields';
 import { logIn } from '/lib/auth/auth.services';
+import {LogInApi} from "../../lib/jeebka/jeebka.services";
 
 export default function SignInForm({className, handleLogIn}) {
 
-  const [fields, handleFieldChange] = useFormFields({
+  const [fields, handleFieldChange] = useFields({
     email: "",
     password: ""
   });
 
   const handleSubmit = (event) => {
+    LogInApi(fields.email, fields.password);
     logIn(fields.email, fields.password, handleLogIn);
   }
 

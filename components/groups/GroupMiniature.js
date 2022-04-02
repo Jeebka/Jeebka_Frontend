@@ -36,7 +36,7 @@ const GroupNameInput = styled('textarea')(({ theme }) => ({
   backgroundColor: '#f2f2f2'
 }));
 
-export default function GroupMiniature({name, href}) {
+export default function GroupMiniature({name, onClick}) {
 
   const saveGroup = () => {
     console.log('Tamos dentro');
@@ -58,7 +58,7 @@ export default function GroupMiniature({name, href}) {
 
   return (
     <ThemeProvider theme={theme}>
-      <Card sx={{ maxWidth: 200}}>
+      <Card sx={{ maxWidth: 200}} onClick={onClick}>
         <Box
           sx={{
             width: 'auto',

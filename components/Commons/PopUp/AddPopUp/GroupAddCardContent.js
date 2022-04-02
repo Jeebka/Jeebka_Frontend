@@ -9,6 +9,8 @@ import {Switch} from "@mui/material";
 import {CustomNameInput} from "./CustomInputs";
 import UnlockIcon from "../../../../styles/resources/svg/UnlockIcon";
 import LockIcon from "../../../../styles/resources/svg/LockIcon";
+import {useFields} from "../../../../hooks/sign/useFields";
+import {CreateGroup} from "../../../../lib/jeebka/jeebka.services";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     width: 62,
@@ -57,22 +59,61 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     },
 }));
 
-export default function GroupAddCardContent({theme, handleSave}) {
+export default function GroupAddCardContent({theme, closePopUp}) {
+
+    const [fields, handleFieldChange] = useFields({
+        name: "",
+        description: "",
+        public: false
+    });
+
+    const handleSwitchChange = (e) => {
+        let evt = {target: {
+                id: 'public',
+                value: !e.target.checked
+            }}
+        handleFieldChange(evt);
+    }
+
+    const handleSave = () => {
+        let group = {name: fields.name, description: fields.description, public: fields.public}
+        CreateGroup(group, () => {
+            closePopUp();
+        });
+
+    }
+
     return (
         <>
             <CardContent>
                 <TextField
                     sx = {{padding: 'none', marginBottom: '10px', borderBottom: '1px solid #CBCBCB',}}
-                    id="standard-basic"
+                    id="name"
                     variant="standard"
                     fullWidth
                     placeholder="Group Name"
                     InputProps={{ disableUnderline: true }}
+                    onChange={handleFieldChange}
+                    value={fields.name}
                 />
-                <CustomNameInput autoSize={true} height={'100px'} placeholder="Put a group description here."/>
+                <CustomNameInput
+                    id='description'
+                    onChange={handleFieldChange}
+                    value={fields.description}
+                    autoSize={true}
+                    height={'100px'}
+                    placeholder="Put a group description here."/>
             </CardContent>
             <CardActions sx={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
-                <MaterialUISwitch title="Public?" sx={{m:1}} checkedIcon={<UnlockIcon/>} icon={<LockIcon/>} ></MaterialUISwitch>
+                <MaterialUISwitch
+                    id='public'
+                    title="Public?"
+                    sx={{m:1}}
+                    checkedIcon={<UnlockIcon/>}
+                    icon={<LockIcon/>}
+                    onChange={handleSwitchChange}
+                    value={fields.public}
+                />
                 <Fab title="Add new group" size="small" aria-label="add" color={'primary'} onClick={handleSave} theme={theme} sx={{marginLeft: 'auto'}}>
                     <AddIcon theme={theme} color='info'/>
                 </Fab>
