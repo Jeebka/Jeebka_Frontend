@@ -3,11 +3,12 @@ import css from "/styles/css/Link.module.css";
 import Link from "./Link";
 import PropTypes from "prop-types";
 
-export default function LinkList({ info, handleDeleteLink }) {
+export default function LinkList({ links, handleDeleteLink }) {
+    console.log(links);
   return (
     <>
       <Box className={css.links_list_container}>
-        {info.links?.map((link) => (
+        {links.map((link) => (
           <Link
             className={css.link}
             linkInfo={link}

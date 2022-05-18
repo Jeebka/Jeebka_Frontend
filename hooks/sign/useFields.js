@@ -6,7 +6,6 @@ export function useFields(initialState) {
   return [
     fields,
     function(event) {
-      console.log(event.target.value);
       setValues({
         ...fields,
         [event.target.id]: event.target.value

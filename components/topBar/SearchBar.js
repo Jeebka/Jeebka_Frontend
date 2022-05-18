@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import TextField from "@mui/material/TextField";
 import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
@@ -9,6 +9,7 @@ import Checkbox from "@mui/material/Checkbox";
 import css from "/styles/css/Link.module.css";
 import { ThemeProvider } from "@emotion/react";
 import { createTheme } from "@mui/material//styles";
+import {GetUserTags} from "../../lib/jeebka/jeebka.services";
 
 const customTheme = createTheme({
   palette: {
@@ -25,7 +26,7 @@ const customTheme = createTheme({
   },
 });
 
-export default function SearchBar() {
+export default function SearchBar({tags, renderTags=false, search}) {
   const [searchValue, setSearchValue] = useState({ link: "" });
   const [searchTags, setSearchTags] = useState({});
   const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
@@ -37,67 +38,57 @@ export default function SearchBar() {
     });
   };
 
-  const tags = [
-    { name: "Mate" },
-    { name: "Algebra" },
-    { name: "ECI" },
-    { name: "Games" },
-    { name: "Doom" },
-    { name: "Algoritmos" },
-    { name: "Redes" },
-    { name: "Web" },
-    { name: "HTML" },
-    { name: "CSS" },
-  ];
-
   const searchLink = () => {
-    console.log(searchValue, searchTags);
+    let tagsFilter = searchTags.map((tag) => {return tag.name});
+    let name = searchValue.link;
+    search(name, tagsFilter);
   };
 
   return (
-    <ThemeProvider theme={customTheme}>
-      <div className={`${css.searchBar}`}>
-        <TextField
-          sx={{ width: '50%' }}
-          size="small"
-          className="searchLink"
-          name="link"
-          id="search-link"
-          label="Link Name"
-          value={searchValue.link}
-          onChange={handleChange}
-        />
-        <Autocomplete
-          sx={{ width: '40%' }}
-          multiple
-          name="tags"
-          size="small"
-          id="checkbox-tags"
-          limitTags={7}
-          options={tags}
-          disableCloseOnSelect
-          getOptionLabel={(tags) => tags.name}
-          onChange={(event, value) => setSearchTags(value)}
-          renderOption={(props, tags, { selected }) => (
-            <li {...props}>
-              <Checkbox
-                icon={icon}
-                checkedIcon={checkedIcon}
-                checked={selected}
-              />
-              {tags.name}
-            </li>
-          )}
-          renderInput={(params) => (
-            <TextField {...params} label="Tags" />
-          )}
-        />
-        <IconButton onClick={searchLink}>
-          <SearchIcon sx={{color: "#15787A"}}/>
-        </IconButton>
-      </div>
-    </ThemeProvider>
+      <ThemeProvider theme={customTheme}>
+        <div className={`${css.searchBar}`}>
+          <TextField
+              sx={{ width: '50%' }}
+              size="small"
+              className="searchLink"
+              name="link"
+              id="search-link"
+              label="Link Name"
+              value={searchValue.link}
+              onChange={handleChange}
+          />
+          { renderTags ? <Autocomplete
+              sx={{ width: '40%' }}
+              multiple
+              name="tags"
+              size="small"
+              id="checkbox-tags"
+              limitTags={7}
+              options={tags}
+              disableCloseOnSelect
+              getOptionLabel={(tags) => tags.name}
+              onChange={(event, value) => setSearchTags(value)}
+              renderOption={(props, tags, { selected }) => (
+                  <li {...props}>
+                    <Checkbox
+                        icon={icon}
+                        checkedIcon={checkedIcon}
+                        checked={selected}
+                    />
+                    {tags.name}
+                  </li>
+              )}
+              renderInput={(params) => (
+                  <TextField {...params} label="Tags" />
+              )}
+          /> : null}
+          { <IconButton onClick={searchLink}>
+            <SearchIcon sx={{color: "#15787A"}}/>
+          </IconButton> }
+        </div>
+      </ThemeProvider>
   );
 }
+
 
 

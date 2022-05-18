@@ -39,7 +39,6 @@ const GroupNameInput = styled('textarea')(({ theme }) => ({
 export default function GroupMiniature({name, onClick}) {
 
   const saveGroup = () => {
-    console.log('Tamos dentro');
     fetch(" http://localhost:5203/v1/jeebka/users/esteesunemail", {
       mode: 'cors',
       method: "GET",
@@ -51,7 +50,6 @@ export default function GroupMiniature({name, onClick}) {
     })
     .then((resp) => resp.json())
     .then(function(data){
-      console.log(data.results);
     })
   }
 

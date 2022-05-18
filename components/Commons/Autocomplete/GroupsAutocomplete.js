@@ -44,7 +44,7 @@ export default function GroupsAutocomplete({ groups, setGroupAdd }){
             size="small"
             ListboxProps={{ style: { maxHeight: '15vh' } }}
             sx={{ width: '100%', marginTop:'3%' }}
-            onChange={(event, value) => setGroupAdd(value)}
+            onChange={(event, value) => setGroupAdd(value.name)}
             onOpen={() => {setOpen(true);}}
             onClose={() => {setOpen(false);}}
             isOptionEqualToValue={(option, value) => option.name === value.name}

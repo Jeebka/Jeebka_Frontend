@@ -5,23 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd6417c3-3b5c-45d7-8170-174bc07c40e2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/components/Links/GroupInfoBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/resources/99815.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Commons/Autocomplete/GroupsAutocomplete.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Commons/Autocomplete/GroupsAutocomplete.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Commons/MultiButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Commons/MultiButton.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Commons/PopUp/AddPopUp/AddCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Commons/PopUp/AddPopUp/AddCard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Commons/PopUp/AddPopUp/GroupAddCardContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Commons/PopUp/AddPopUp/GroupAddCardContent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Commons/PopUp/AddPopUp/LinkAddCardContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Commons/PopUp/AddPopUp/LinkAddCardContent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Commons/PopUp/PopUpButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Commons/PopUp/PopUpButton.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Commons/PopUp/PopUpWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Commons/PopUp/PopUpWindow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Links/GroupExtended.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Links/GroupExtended.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Links/GroupHead.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Links/GroupHead.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Links/Link.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Links/Link.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Links/LinkList.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Links/LinkList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/groups/GroupMiniature.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/groups/GroupMiniature.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/groups/groupsContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/groups/groupsContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sideMenu/sideMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sideMenu/sideMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sign/sign.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sign/sign.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sign/signForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sign/signForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/sign/signInForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sign/signInForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/sign/signUpForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sign/signUpForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/sign/useFormFields.js" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/sign/useFields.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/topBar/SearchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/topBar/SearchBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/topBar/TopBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/topBar/TopBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hooks/sign/useFields.js" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/sign/useFields.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/auth/auth.services.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/auth/auth.services.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/firebase/firebase.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/firebase/firebase.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/jeebka/jeebka.services.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/jeebka/jeebka.services.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/redux/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/redux/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/redux/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/redux/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/css/Link.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/Link.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/css/Login.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/Login.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/css/SideMenu.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/SideMenu.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,24 +74,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/styles/resources/svg" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jrper/OneDrive/Documents/Jeebka/Jeebka_Frontend/lib/firebase&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\jrper\\OneDrive\\Documents\\Masiv\\Jeebka_Frontend\\node_modules\\prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jrper\OneDrive\Documents\Jeebka\Jeebka_Frontend\lib\firebase" />
       <recent name="C:\Users\jrper\OneDrive\Documents\Semestre\Jeebka\Jeebka_FrontEnd\styles\resources\svg" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jrper\OneDrive\Documents\Jeebka\Jeebka_Frontend\styles\resources" />
       <recent name="C:\Users\jrper\OneDrive\Documents\Semestre\Jeebka\Jeebka_FrontEnd\components\Commons\PopUp" />
       <recent name="C:\Users\jrper\OneDrive\Documents\Semestre\Jeebka\Jeebka_FrontEnd\components\Playground" />
       <recent name="C:\Users\jrper\OneDrive\Documents\Semestre\Jeebka\Jeebka_FrontEnd\components\Groups\AddPopUp" />
@@ -92,6 +115,22 @@
       <workItem from="1648762772603" duration="6802000" />
       <workItem from="1648770123240" duration="17061000" />
       <workItem from="1648826829050" duration="14879000" />
+      <workItem from="1651893670977" duration="239000" />
+      <workItem from="1651893925163" duration="571000" />
+      <workItem from="1651894958936" duration="342000" />
+      <workItem from="1652146386107" duration="3849000" />
+      <workItem from="1652227543926" duration="1915000" />
+      <workItem from="1652299463326" duration="671000" />
+      <workItem from="1652650121025" duration="1263000" />
+      <workItem from="1652651801740" duration="6538000" />
+      <workItem from="1652659302591" duration="225000" />
+      <workItem from="1652664165220" duration="3945000" />
+      <workItem from="1652726330304" duration="1821000" />
+      <workItem from="1652741838959" duration="7628000" />
+      <workItem from="1652804978782" duration="2825000" />
+      <workItem from="1652819313530" duration="18035000" />
+      <workItem from="1652890113325" duration="5615000" />
+      <workItem from="1652897482649" duration="4819000" />
     </task>
     <servers />
   </component>

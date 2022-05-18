@@ -8,54 +8,31 @@ import {CustomNameInput} from "./CustomInputs";
 import TagsAutocomplete from "../../Autocomplete/TagsAutocomplete";
 import GroupsAutocomplete from "../../Autocomplete/GroupsAutocomplete";
 import {useFields} from "../../../../hooks/sign/useFields";
+import {CreateLink} from "../../../../lib/jeebka/jeebka.services";
 
-const groups = [
-    { name: "Mate", id: "123" },
-    { name: "Sova", id: "321" },
-];
-
-const tags = [
-    { name: "Mate" },
-    { name: "Algebra" },
-    { name: "ECI" },
-    { name: "Games" },
-    { name: "Doom" },
-    { name: "Algoritmos" },
-    { name: "Redes" },
-    { name: "Web" },
-    { name: "HTML" },
-    { name: "CSS" },
-];
-
-
-export default function LinkAddCardContent({addButtonOnClick, theme, handleSave}){
+export default function LinkAddCardContent({theme, closePopUp, renderGroups=true, defaultGroup="", groups, tags}){
 
     const [tagsAdd, setTagsAdd] = useState({});
-    const [groupAdd, setGroupAdd] = useState("");
+    const [groupAdd, setGroupAdd] = useState(defaultGroup);
 
     const [link, setLink] = useFields({
         name: "",
         url: ""
     });
 
-    const cleanValues = () => {
-        setLink({
-            name: "",
-            url: ""
-        });
-    };
-
-    const addLink = () => {
-        console.log(link);
-        cleanValues();
-        addButtonOnClick();
-    };
+    const handleSave = () => {
+        let tagsList = tagsAdd.map((tag) => { return tag.name; })
+        let newLink = {tags: tagsList, name: link.name, url: link.url};
+        CreateLink(newLink, groupAdd, () => {
+            closePopUp();
+        })
+    }
 
     return (
         <>
             <CardContent>
                 <TextField
-                    id="standard-basic"
+                    id="name"
                     variant="standard"
                     fullWidth
                     placeholder="Link Name"
@@ -65,9 +42,17 @@ export default function LinkAddCardContent({addButtonOnClick, theme, handleSave}
                         marginBottom: '10px',
                         borderBottom: '1px solid #CBCBCB',
                     }}
+                    onChange={setLink}
+                    value={link.name}
                 />
-                <CustomNameInput height={'30px'} placeholder="Put your link url here"/>
-                <GroupsAutocomplete setGroupAdd={setGroupAdd} groups={groups}/>
+                <CustomNameInput
+                    id="url"
+                    height={'30px'}
+                    placeholder="Put your link url here"
+                    onChange={setLink}
+                    value={link.url}
+                />
+                {renderGroups ? <GroupsAutocomplete setGroupAdd={setGroupAdd} groups={groups}/> : null}
                 <TagsAutocomplete setTagsAdd={setTagsAdd} tags={tags}/>
             </CardContent>
             <CardActions sx={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
@@ -78,4 +63,3 @@ export default function LinkAddCardContent({addButtonOnClick, theme, handleSave}
         </>
     );
 }
-

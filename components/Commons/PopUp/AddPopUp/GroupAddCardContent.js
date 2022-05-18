@@ -58,7 +58,11 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
         borderRadius: 20 / 2,
     },
 }));
-
+const getColor = () => {
+    return "hsl(" + 360 * Math.random() + ',' +
+        (25 + 70 * Math.random()) + '%,' +
+        (85 + 10 * Math.random()) + '%)'
+}
 export default function GroupAddCardContent({theme, closePopUp}) {
 
     const [fields, handleFieldChange] = useFields({
@@ -70,13 +74,13 @@ export default function GroupAddCardContent({theme, closePopUp}) {
     const handleSwitchChange = (e) => {
         let evt = {target: {
                 id: 'public',
-                value: !e.target.checked
-            }}
+                value: e.target.checked
+            }};
         handleFieldChange(evt);
     }
 
     const handleSave = () => {
-        let group = {name: fields.name, description: fields.description, public: fields.public}
+        let group = {name: fields.name, description: fields.description, public: fields.public, color: getColor()};
         CreateGroup(group, () => {
             closePopUp();
         });

@@ -6,7 +6,6 @@ export default function GroupsContainer({groups, changeGroup}) {
         <div className={css.groups_container}>
             {
                 groups.map((group) => {
-                    // eslint-disable-next-line react/jsx-key
                     return <GroupMiniature name={group.name} href={group.href} onClick={() => {changeGroup(group.name)}}/>
                 })
             }

@@ -3,11 +3,11 @@ import NavBar from "./NavBar/NavBar"
 import SearchBar from "./SearchBar"
 import UserBar from "./UserBar/UserBar"
 
-export default function TopBar({homeOnClick, suggestedOnClick, sharedOnClick, tabsState}) {
+export default function TopBar({homeOnClick, suggestedOnClick, sharedOnClick, tabsState, tags}) {
 
   return (
     <div className={css.topBar}>
-      <SearchBar/>
+      <SearchBar tags={tags}/>
       <NavBar homeOnClick={homeOnClick} sharedOnClick={sharedOnClick} suggestedOnClick={suggestedOnClick} isActive={tabsState}/>
       <UserBar/>
     </div>

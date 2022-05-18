@@ -2,7 +2,7 @@ import css from "/styles/css/PopUp.module.css";
 import AddCard from "./AddPopUp/AddCard";
 
 
-export default function PopUpWindow({closeButtonOnClick, isForLink}) {
+export default function PopUpWindow({closeButtonOnClick, isForLink, linkWindowProps}) {
 
     const saveGroup = () => {}
     const doNothing = (e) => {
@@ -12,7 +12,7 @@ export default function PopUpWindow({closeButtonOnClick, isForLink}) {
     return (
         <div className={css.popUpContainer} onClick={closeButtonOnClick}>
             <div className={`${css.fade_in} ${css.popUpWindow}`}>
-                <AddCard isForLink={isForLink} onClick={doNothing} closePopUp={closeButtonOnClick}></AddCard>
+                <AddCard isForLink={isForLink} onClick={doNothing} closePopUp={closeButtonOnClick} linkWindowProps={linkWindowProps}></AddCard>
             </div>
 
         </div>

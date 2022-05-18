@@ -21,7 +21,7 @@ export default function Sign({handleLogIn, handleSignUp}) {
         setTimeout(() => {setSignInVisibility(true)}, 200);
         setTimeout(() => {setSignUpVisibility(false)}, 500);
       }
-      setTimeout(() => {console.log(isSafeToSwitch); setIsSafeToSwitch(true);}, 750);
+      setTimeout(() => { setIsSafeToSwitch(true);}, 750);
     }
     return isSafeToSwitch;
     

@@ -15,7 +15,6 @@ export default function SideMenu({sharedOnClick, suggestedOnClick, groups, chang
       if(selectedGroups.length === 4) break;
       selectedGroups.push(groups[group]);
     }
-    console.log(groups)
     return selectedGroups;
   }
 
@@ -28,7 +27,6 @@ export default function SideMenu({sharedOnClick, suggestedOnClick, groups, chang
         <hr></hr>
         {
           selectGroups().map((group) => {
-            console.log(group)
             return <MenuItem svgIcon={<GroupIcon/>} text={group.name} onClick={() => {changeGroup(group.name)}}/>
           })
         }

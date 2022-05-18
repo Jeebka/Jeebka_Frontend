@@ -21,7 +21,7 @@ export default function MultiButton({reloadViewContent}) {
                 </div>
                 <div className={css.element_container} onClick={doNothing}>
                     <PopUpButton reloadViewContent={reloadViewContent} iconSize={'small'} svgIcon={<GroupIcon/>} buttonClassName={css.float_element}/>
-                    <PopUpButton reloadViewContent={reloadViewContent} isForLink={true} iconSize={'small'} svgIcon={<LinkIcon/>} buttonClassName={css.float_element}/>
+                    <PopUpButton linkWindowProps={{renderGroups: true, defaultGroup: ""}} reloadViewContent={reloadViewContent} isForLink={true} iconSize={'small'} svgIcon={<LinkIcon/>} buttonClassName={css.float_element}/>
                 </div>
             </div>
         </>

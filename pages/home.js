@@ -7,17 +7,44 @@ import {createRef, useEffect, useState} from "react";
 import { logOut } from "/lib/auth/auth.services";
 import css from "/styles/css/Page.module.css";
 import GroupExtended from "../components/Links/GroupExtended";
-import {GetUserGroups, GetUserSharedGroups, GetUserSuggestedGroups, LogInApi} from "../lib/jeebka/jeebka.services";
+import {
+  DeleteLink,
+  GetUserGroups,
+  GetUserSharedGroups,
+  GetUserSuggestedGroups, GetUserTags,
+  LogInApi
+} from "../lib/jeebka/jeebka.services";
+import store from "../lib/redux";
+import {changeAddOptions, changeUserAuth} from "../lib/redux/actions";
+import GroupInfoBar from "../components/Links/GroupInfoBar";
 
 export default function Home() {
   const [isActive, setIsActive] = useState([true, false, false, false]);
   const containerRef = createRef();
   const [group, setGroup] = useState(null);
   const [groups, setGroups] = useState([]);
+  const [tags, setTags] = useState([]);
+
+  const loadTags = () => {
+    GetUserTags((data) => {
+      setTags(data.map((tag) => { return {name: tag}}));
+    })
+  }
 
   const changeCurrentDisplayedGroups = (fetchedGroups) => {
     setGroups(fetchedGroups && Object.keys(fetchedGroups).length === 0 ? [] : fetchedGroups);
+    let groupsSet = fetchedGroups.map((group) => {
+      return {name: group.name};
+    });
+    let tagsSet = fetchedGroups.map((group) => {
+      return group.linksTags.map((tag) => {
+        return {name: tag}
+      });
+    });
+    tagsSet = tagsSet.flat();
+    store.dispatch(changeAddOptions({groups: groupsSet, tags: tagsSet}));
   }
+
   const loadGroups = () => {
     if(isActive[0]) {
       GetUserGroups(changeCurrentDisplayedGroups);
@@ -31,7 +58,8 @@ export default function Home() {
   }
 
   useEffect(() => {
-      loadGroups();
+    loadGroups();
+    loadTags();
   },[isActive])
 
   const handleTabChange = (tab) => {
@@ -57,14 +85,8 @@ export default function Home() {
     }
   }
 
-  const refreshContent = () => {
-
-  }
-
   const changeGroup = (groupName) => {
-    console.log("Changing to group "+groupName)
     let newGroup = groups.filter(group => group.name == groupName);
-    console.log(newGroup);
     setGroup(newGroup[0]);
     setIsActive([false, false, false, true]);
   }
@@ -73,17 +95,25 @@ export default function Home() {
     logOut(() => {});
   }
 
+  const handleDeleteLink = (linkId, callback) => {
+    DeleteLink(linkId, callback);
+    loadGroups();
+  }
+
+  store.dispatch(changeUserAuth({email: "j382@mail.com"}));
   return (
       <ProtectedRoute redirectRoute="/">
         <div className={css.pageContent} ref={containerRef}>
           <HomeContent shouldRenderAddButton={isActive[0]} isRenderAGroup={isActive[3]} reloadViewContent={loadGroups}>
-            {!isActive[3] ? <GroupsContainer groups={groups} changeGroup={changeGroup}/> : null}
-            {isActive[3] ? <GroupExtended groupProps={group}/> : null}
+            {!isActive[3] ? <GroupsContainer groups={groups} changeGroup={isActive[0] ? changeGroup : () => {}}/> : null}
+            {isActive[3] ? <GroupExtended reloadViewContent={loadGroups} handleDeleteLink={handleDeleteLink} groupProps={group}/> : null}
           </HomeContent>
           <TopBar tabsState={isActive}
                   homeOnClick={() => {handleTabChange(0);}}
                   sharedOnClick={() => {handleTabChange(2);}}
-                  suggestedOnClick={() => {handleTabChange(1);}}>
+                  suggestedOnClick={() => {handleTabChange(1);}}
+                  tags={tags}
+          >
           </TopBar>
           <SideMenu
               homeOnClick={() => {handleTabChange(0);}}
@@ -93,6 +123,7 @@ export default function Home() {
               changeGroup = {changeGroup}
           >
           </SideMenu>
+          {isActive[3] ? <GroupInfoBar groupProps={group} handleDeleteGroup={() => {handleTabChange(0)}}></GroupInfoBar>: null}
         </div>
       </ProtectedRoute>
   )

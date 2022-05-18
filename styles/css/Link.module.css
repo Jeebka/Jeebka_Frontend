@@ -34,13 +34,13 @@
 .header {
     position: relative;
     display: flex;
+    flex-direction: row;
     height: 60px;
     padding: 15px 45px;
     background-color: #b9f2f3;
     justify-content: space-between;
     align-items: center;
-    border-radius: 3px;
-    box-shadow: 0px 1px 2px;
+    border-radius: 1vw 1vw 0vw 0vw;
     z-index: 20;
 }
 
@@ -48,6 +48,36 @@
     color: #1b9b9d;
     transform: scale(1.3);
     margin-right: 10px;
+}
+
+.header__bar {
+    display: flex;
+    width: 77.5%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header .button__menu__container svg {
+    color: #1B9B9D;
+    background-color: transparent;
+    font-size: 30px;
+    border-radius: 10%;
+    transition: background-color 0.25s;
+    cursor: pointer;
+}
+
+.header .button__menu__container svg:hover {
+    color: #1B9B9D;
+    background-color: rgba(0,0,0,0.125);
+    font-size: 30px;
+    border-radius: 10%;
+}
+
+.header .button__menu__container svg:active {
+    color: #1B9B9D;
+    background-color: rgba(0,0,0,0.25);
+    font-size: 30px;
+    border-radius: 10%;
 }
 
 .header .button__menu__container .menu__groupAdd {
@@ -67,12 +97,12 @@
 .header .title {
     color: #15787a;
     font-weight: bold;
+    font-size: x-large;
 }
 
 .group__info__container {
     position: fixed;
     width: 700px;
-    background-color: #e4e4e4;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -138,12 +168,101 @@
     overflow-y: auto;
     padding: 25px;
     z-index: 10;
+    border-radius: 0vw 0vw 1vw 1vw;
+
 }
 
 .group_extended_container {
     position: relative;
     background-color: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     height: 100%;
+    -webkit-box-shadow: 5px 5px 30px 5px rgba(0,0,0,0.52);
+    box-shadow: 5px 5px 30px 5px rgba(0,0,0,0.52);
+
+}
+
+.group__info__bar {
+    position: absolute;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: right;
+    width: 2vw;
+    height: 90vh;
+    background-color: #EEFCFC;
+    right: 0px;
+    top: 8vh;
+    z-index: 1000;
+    transition: width 0.5s;
+    border-bottom-left-radius: 1vw;
+    box-shadow: 0px 2px 15px 5px rgba(0,0,0,0.25);
+}
+
+.group__info__bar.active{
+    width: 20vw;
+}
+
+.group__info__bar.active svg{
+    margin-left: -1.5vw;
+}
+
+.group__info__bar svg{
+    font-size: 50px;
+    margin-right: -1.5vw;
+    color: #1B9B9D;
+    cursor: pointer;
+}
+
+.group__info__bar .menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+    height: 100%;
+    opacity: 0%;
+    padding: 1vw;
+    transition: opacity 0.5s;
+}
+
+.group__info__bar.active .menu{
+    opacity: 100%;
+}
+
+.menu__section {
+    height: 25%;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu__section span{
+    margin-left: 1vw;
+}
+
+.menu__section.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu__section button{
+    width: auto;
+    height: 2vw;
+}
+
+.menu__section .icon__delete {
+    font-size: 60px;
+    width: 5vw;
+    transition: color 0.25s;
+}
+
+.menu__section .icon__delete:hover{
+    color: #15787a;
 }
 
 .info__card .member__container ul {
@@ -158,12 +277,12 @@
     display: flex;
     background-color: #b9f2f3;
     border-radius: 3px;
-    box-shadow: 0px 1px 2px;
     margin: 10px auto;
     justify-content: space-between;
     position: relative;
     overflow: hidden;
     flex-direction: column;
+    border-radius: 0.5vw 0.5vw 0.5vw 0.5vw;
 }
 
 .link .url__container {
@@ -175,6 +294,10 @@
 
 .link .title__container {
     width: 50%;
+}
+
+.link .title__container h3 {
+    font-size: medium;
 }
 
 .link .head__link__container {
@@ -220,22 +343,34 @@
 .link .tags__container {
     width: 100%;
     position: relative;
-    background-color: #f5f5f5;
+    background-color: rgba(255,255,255,0.9);
     padding: 15px;
 }
 
 .link .button__delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
     position: absolute;
-    width: 50px;
-    margin: 5px 0px 0px;
+    width: 3vw;
+    height: 40%;
     right: 0;
     top: 0;
 }
 
-.link .button__delete .icon__delete {
-    color: dimgrey;
-    width: 20px;
+.link .button__delete svg{
+    cursor: pointer;
+    color: #1B9B9D;
+    transition: color 0.25s;
+}
+
+.link .button__delete svg:hover {
+    color: #188e8f;
+}
+
+.link .button__delete svg:active {
+    color: #126869;
 }
 
 /*480 960 1328*/

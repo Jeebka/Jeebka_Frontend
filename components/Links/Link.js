@@ -8,6 +8,7 @@ export default function Link({ linkInfo, handleDeleteLink }) {
   const deleteLink = () => {
     handleDeleteLink(linkInfo.id);
   };
+  console.log(linkInfo);
   return (
     <>
       <Box className={css.link}>
@@ -22,17 +23,13 @@ export default function Link({ linkInfo, handleDeleteLink }) {
           </Box>
         </Box>
         <Box className={css.tags__container}>
-          {linkInfo.tags.map((tag) => (
-            <span className={css.tag} key={tag}>
-              {tag}
-            </span>
-          ))}
+          {
+            linkInfo.tags.map((text) => { return <span className={css.tag}>{text}</span>;})
+          }
         </Box>
-        <Box className={css.button__delete}>
-          <Button onClick={deleteLink}>
-            <DeleteIcon className={css.icon__delete} />
-          </Button>
-        </Box>
+        <div className={css.button__delete}>
+          <DeleteIcon onClick={deleteLink} className={css.icon__delete} />
+        </div>
       </Box>
     </>
   );
